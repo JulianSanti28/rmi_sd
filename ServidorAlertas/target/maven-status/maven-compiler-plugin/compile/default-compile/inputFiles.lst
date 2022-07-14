@@ -1,0 +1,16 @@
+D:\Universidad\2022.1\Sistemas distribuidos\parcial 2\rmi_sd\ServidorAlertas\src\main\java\utils\UtilidadesRegistroNotificacion.java
+D:\Universidad\2022.1\Sistemas distribuidos\parcial 2\rmi_sd\ServidorAlertas\src\main\java\model\sensores\SensorSaturacionOxigeno.java
+D:\Universidad\2022.1\Sistemas distribuidos\parcial 2\rmi_sd\ServidorAlertas\src\main\java\model\sensores\SensorTensionArterial.java
+D:\Universidad\2022.1\Sistemas distribuidos\parcial 2\rmi_sd\ServidorAlertas\src\main\java\model\sensores\Sensor.java
+D:\Universidad\2022.1\Sistemas distribuidos\parcial 2\rmi_sd\ServidorAlertas\src\main\java\model\sensores\SensorFrecuenciaRespiratoria.java
+D:\Universidad\2022.1\Sistemas distribuidos\parcial 2\rmi_sd\ServidorAlertas\src\main\java\model\Notificacion.java
+D:\Universidad\2022.1\Sistemas distribuidos\parcial 2\rmi_sd\ServidorAlertas\src\main\java\model\sensores\SensorFrecuenciaCardiaca.java
+D:\Universidad\2022.1\Sistemas distribuidos\parcial 2\rmi_sd\ServidorAlertas\src\main\java\model\sensores\SensorTemperatura.java
+D:\Universidad\2022.1\Sistemas distribuidos\parcial 2\rmi_sd\ServidorAlertas\src\main\java\utils\UtilidadesRegistroServidor.java
+D:\Universidad\2022.1\Sistemas distribuidos\parcial 2\rmi_sd\ServidorAlertas\src\main\java\model\GestionSensoresImpl.java
+D:\Universidad\2022.1\Sistemas distribuidos\parcial 2\rmi_sd\ServidorAlertas\src\main\java\model\IClienteNotificacion.java
+D:\Universidad\2022.1\Sistemas distribuidos\parcial 2\rmi_sd\ServidorAlertas\src\main\java\model\SensoresDTO.java
+D:\Universidad\2022.1\Sistemas distribuidos\parcial 2\rmi_sd\ServidorAlertas\src\main\java\presentation\ServerMain.java
+D:\Universidad\2022.1\Sistemas distribuidos\parcial 2\rmi_sd\ServidorAlertas\src\main\java\model\GestionNotificacionImpl.java
+D:\Universidad\2022.1\Sistemas distribuidos\parcial 2\rmi_sd\ServidorAlertas\src\main\java\model\IGestionNotificacion.java
+D:\Universidad\2022.1\Sistemas distribuidos\parcial 2\rmi_sd\ServidorAlertas\src\main\java\model\IGestionSensores.java

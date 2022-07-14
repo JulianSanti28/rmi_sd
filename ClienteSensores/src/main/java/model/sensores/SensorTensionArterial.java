@@ -23,7 +23,8 @@ public class SensorTensionArterial extends Sensor implements Serializable {
         System.out.println("Digite valor de " + this.getNombre() + " sistóloca en " + this.getUnidades());
         this.setPresionSistolica(entrada.nextDouble());
         entrada.nextLine();
-        System.out.println("Digite valor de " + this.getNombre() + " distólica en " + this.getUnidades());        this.setPresioDistolica(entrada.nextDouble());
+        System.out.println("Digite valor de " + this.getNombre() + " distólica en " + this.getUnidades());
+        this.setPresioDistolica(entrada.nextDouble());
         entrada.nextLine();
     }
 }
