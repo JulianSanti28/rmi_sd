@@ -1,5 +1,7 @@
 model\GestionNotificacionImpl.class
 model\SensoresDTO.class
+utils\GestionJSON.class
+model\InformacionDTO.class
 model\sensores\SensorFrecuenciaCardiaca.class
 model\IGestionNotificacion.class
 utils\UtilidadesRegistroNotificacion.class
@@ -11,6 +13,7 @@ model\sensores\SensorTemperatura.class
 model\IClienteNotificacion.class
 model\sensores\SensorTensionArterial.class
 model\sensores\SensorFrecuenciaRespiratoria.class
+utils\ConexionClienteServLogs.class
 utils\UtilidadesRegistroServidor.class
 presentation\ServerMain.class
 model\IGestionSensores.class

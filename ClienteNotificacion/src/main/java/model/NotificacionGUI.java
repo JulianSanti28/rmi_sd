@@ -33,16 +33,16 @@ public class NotificacionGUI extends javax.swing.JFrame {
         
         DefaultTableModel model = (DefaultTableModel) this.table.getModel();
         for(Sensor sensor: notificacion.getSensoresFueraRango()){
-            System.out.println("Sensor "+ sensor.getNombre());
+            
             if(sensor.getNombre().equalsIgnoreCase("tensión")){
-                System.out.println("Es sensor de tension");
+                
                 SensorTensionArterial sensorTension = (SensorTensionArterial) sensor;
                 if(!(sensorTension.getPresionSistolica()>=110 && sensorTension.getPresionSistolica()<=140)){
-                    System.out.println("sistolica");
+                    
                     model.addRow(new Object[]{"tension sistolica",sensorTension.getPresionSistolica(),sensor.getUnidades()});
                 }
                 if(!(sensorTension.getPresioDistolica() >= 70 && sensorTension.getPresioDistolica()<=90)){
-                    System.out.println("distolica");
+                   
                     model.addRow(new Object[]{"tension distolica",sensorTension.getPresioDistolica(),sensor.getUnidades()});
                 }
                     

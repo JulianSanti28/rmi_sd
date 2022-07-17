@@ -7,6 +7,8 @@ import model.IGestionSensores;
 import utils.UtilidadesRegistroServidor;
 
 import java.rmi.RemoteException;
+import model.InformacionDTO;
+
 
 public class ServerMain {
 
@@ -15,11 +17,14 @@ public class ServerMain {
         String direccionIp = "localhost";
         IGestionSensores objRemoto = new GestionSensoresImpl();
         IGestionNotificacion objRemotoNotificacion = new GestionNotificacionImpl();
+        
+        
         try
         {
             UtilidadesRegistroServidor.initNs(puertoRmiRegistry);
             UtilidadesRegistroServidor.RegistrarObjetoRemoto(objRemoto, direccionIp, puertoRmiRegistry, "gestionSensores");
             UtilidadesRegistroServidor.RegistrarObjetoRemoto(objRemotoNotificacion,direccionIp, puertoRmiRegistry, "gestionNotificacion");
+            
             System.out.println("Alerts Server Running...");
         } catch (Exception e)
         {
