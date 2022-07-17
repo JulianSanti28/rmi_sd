@@ -10,6 +10,7 @@ public class ClienteNotificacionImpl extends UnicastRemoteObject implements ICli
     }
     @Override
     public void notificar(Notificacion mensaje) throws RemoteException {
-        System.out.println("Mensaje recibido: " + mensaje.getSensoresFueraRango().size());
+        System.out.println("Sensores fuera de rango: " + mensaje.getSensoresFueraRango().size());
+        NotificacionGUI gui = new NotificacionGUI(mensaje);
     }
 }
