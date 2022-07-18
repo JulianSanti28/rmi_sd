@@ -10,11 +10,13 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 import servicios.InformacionSensor;
+import servicios.ConversorJson;
 
 /**
  *
  * @author Paula
  */
+
 public class GestorHilo extends Thread {
     private Socket objSocketCliente;
        
@@ -34,8 +36,8 @@ public class GestorHilo extends Thread {
             flujoSalida=new DataOutputStream(objSocketCliente.getOutputStream());
             
             message = flujoEntrada.readUTF();//se bloquea el servidor
-
-            message = InformacionSensor.atenderPeticion(message);
+            Sensor s = ConversorJson.JsonToObject(message);
+            message = InformacionSensor.atenderPeticion(s.getNombre());
             //flujoSalida.writeUTF("Se ha registrado error en el servidor de losgs.. ");
             flujoSalida.writeUTF(message);
             System.out.println("Guardando excepcion.."+message);

@@ -9,16 +9,19 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import model.InformacionDTO;
-import model.sensores.Sensor;
-import utils.GestionJSON;
+
 /**
  *
  * @author Paula
  */
 @Data
-public class ConexionClienteServLogs {
+@NoArgsConstructor
+@AllArgsConstructor
+public class ConexionClienteServidorLogs {
     private String dirIpServidor = "";
     private int puertoServidor;
     private DataInputStream flujoEntrada;
@@ -26,11 +29,11 @@ public class ConexionClienteServLogs {
     private Socket socket;
     private InformacionDTO message;
     
-    public void ServerConnection(String dirIP, int puerto){
+    public void ServerConnection( ){
         try {
-            setDirIpServidor(dirIP);
-            setPuertoServidor(puerto);
-            setSocket(new Socket(dirIP, puerto));
+            dirIpServidor="localhost";
+            puertoServidor=2024;
+            setSocket(new Socket(dirIpServidor, puertoServidor));
             setFlujoEntrada(new DataInputStream(getSocket().getInputStream()));
             setFlujoSalida(new DataOutputStream(getSocket().getOutputStream()));
         } catch (IOException excep) {
@@ -38,19 +41,19 @@ public class ConexionClienteServLogs {
         }
     }
     
-    public InformacionDTO peticionRespuesta(Sensor s){
+    public InformacionDTO peticion_respuesta(){
         String tmp = null;
         try {
-            
-            //flujoSalida.writeUTF(s.getNombre());
-            flujoSalida.writeUTF(GestionJSON.objectToJson(s));
+            //flujoSalida.writeUTF("caracteristicas");
             tmp = flujoEntrada.readUTF();// operacion bloqueante
-            //System.out.println("Pasa operacion bloqueante");
             message = GestionJSON.JsonToObject(tmp);
-            getSocket().close();
+            //getSocket().close();
         } catch (IOException ex) {
             ex.printStackTrace();
         }
         return getMessage();
+    }
+    public void cerrarConexionConLogs() throws IOException{
+        getSocket().close();
     }
 }

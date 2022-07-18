@@ -5,6 +5,7 @@
  */
 package servicios;
 import com.google.gson.Gson;
+import modelo.Sensor;
 /**
  *
  * @author Paula
@@ -14,6 +15,12 @@ public class ConversorJson {
         Gson gson = new Gson();
         String response;
         response = gson.toJson(information);
+        return response;
+    }
+    public static Sensor JsonToObject(String json){
+        Gson gson = new Gson();
+        Sensor response = new Sensor();
+        response = gson.fromJson(json, Sensor.class);
         return response;
     }
 }

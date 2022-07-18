@@ -1,5 +1,6 @@
 model\GestionNotificacionImpl.class
 model\SensoresDTO.class
+utils\ConexionClienteServidorLogs.class
 utils\GestionJSON.class
 model\InformacionDTO.class
 model\sensores\SensorFrecuenciaCardiaca.class

@@ -128,7 +128,7 @@ public class GestionSensoresImpl extends UnicastRemoteObject implements  IGestio
             System.out.println("\nError: "+e.getMessage());
         } 
         System.out.println("Enviando error a log..");
-        informacion = cliente.peticion_respuesta(s);
+        informacion = cliente.peticionRespuesta(s);
         
         
         
